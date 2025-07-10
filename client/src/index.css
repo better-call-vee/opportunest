@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Default Light Theme Variables */
+  --color-bgc: #ffffff; /* White */
+  --color-bbgc: #f9fafb; /* Gray-50 */
+  --color-txt: #111827; /* Gray-900 */
+  --color-prm: #059669; /* Emerald-600 */
+  --color-prm-rgb: 5, 150, 105;
+  --color-sry: #065f46; /* Emerald-800 */
+  --color-accent: #10b981; /* Emerald-500 */
+  --color-info: #3b82f6; /* Blue-500 */
+  --color-success: #22c55e; /* Green-500 */
+  --color-hv: #d3f2d5;
+  --color-warning: #f59e0b; /* Amber-500 */
+  --color-error: #ef4444; /* Red-500 */
+  --color-divider: #e5e7eb; /* Gray-200 */
+  --icon-hover-bg: #f3f4f6; /* Gray-100 */
+  --color-md: #e5e7eb; 
+}
+
+@layer base {
+  /* Dark Theme Overrides */
+  .dark {
+    --color-bgc: #111827; /* Gray-900 */
+    --color-bbgc: #1f2937; /* Gray-800 */
+    --color-txt: #f9fafb; /* Gray-50 */
+    --color-prm: #34d399; /* Emerald-400 */
+    --color-prm-rgb: 52, 211, 153;
+    --color-sry: #a7f3d0; /* Emerald-200 */
+    --color-accent: #6ee7b7; /* Emerald-300 */
+    --color-info: #60a5fa; /* Blue-400 */
+    --color-success: #4ade80; /* Green-400 */
+    --color-hv: #d3f2d5;
+    --color-warning: #fcd34d; /* Yellow-400 */
+    --color-error: #f87171; /* Red-400 */
+    --color-divider: #374151; /* Gray-700 */
+    --icon-hover-bg: #374151; /* Gray-700 */
+    --color-md: #374151; 
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-bgc);
+    color: var(--color-txt);
+  }
+}
