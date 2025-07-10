@@ -5,7 +5,7 @@
 </a>
 
 <p align="center">
-  <a href="https://opportunest-9.web.app/" target="_blank">
+  <a href="https://opportunest9.web.app/" target="_blank">
     <strong>View Live Demo »</strong>
   </a>
 </p>
