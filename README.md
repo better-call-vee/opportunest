@@ -16,6 +16,34 @@
 
 ---
 
+## 🏗️ System Architecture & Core Logic
+
+### Multi-Role System & Admin/Moderator Setup
+
+The application's role-based access control is handled securely on the backend. A user's role (`user`, `moderator`, or `admin`) is stored in their MongoDB document.
+
+**To set the initial Admin and Moderator:**
+The system is designed for easy setup without needing a complex UI for the very first admin. The roles are assigned based on email addresses defined in the backend's `.env` file.
+
+1.  Add the designated emails to your server's `.env` file:
+    ```env
+    ADMIN_EMAIL="your_admin_email@example.com"
+    MODERATOR_EMAIL="your_moderator_email@example.com"
+    ```
+2.  When these users register or log in, the `/sync-user` endpoint on the server checks their email against these environment variables and automatically assigns or updates their role in the database.
+3.  After this initial setup, the Admin can then promote or demote other users from their "Manage Users" dashboard.
+
+### Data Fetching with Tanstack Query
+
+This project moves beyond basic `useEffect` and `useState` for data fetching. It leverages **Tanstack Query** as the central "server state" manager.
+
+- **Caching:** Fetched data is cached, making navigation between pages feel instantaneous.
+- **Automatic Refetching:** Data is automatically refetched when the user re-focuses the window, ensuring the UI is always up-to-date.
+- **Invalidation:** When a user performs an action (like deleting a scholarship), the relevant queries are "invalidated," which automatically triggers a refetch of the data and updates the UI seamlessly. This creates a much cleaner and more reliable codebase than manual state management.
+
+---
+
+
 ## ✨ Key Features
 
 Opportunest is built with a focus on robust functionality, professional UI/UX, and a secure, scalable architecture.
