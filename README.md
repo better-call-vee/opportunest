@@ -1,7 +1,7 @@
 # 🎓 Opportunest
 
 <a href="https://opportunest-9.web.app/" target="_blank">
-  <img src="https://raw.githubusercontent.com/better-call-vee/opportunest/main/public/Opportunest.png" alt="Opportunest Banner"/>
+ <img src="https://raw.githubusercontent.com/better-call-vee/opportunest/main/Opportunest.png" alt="Opportunest Banner"/>
 </a>
 
 <p align="center">
