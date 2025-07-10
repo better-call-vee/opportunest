@@ -25,10 +25,10 @@ Opportunest is built with a focus on robust functionality, professional UI/UX, a
   - **Moderator Dashboard:** Empowers moderators with full CRUD capabilities over scholarships, the ability to manage all user reviews, and tools to provide feedback on applications.
   - **Admin Dashboard:** Provides ultimate control, including all moderator privileges plus user management (deleting users, changing roles), and access to a platform-wide analytics dashboard.
 
-- **⚙️ Advanced Data Management & Interaction:**
-  - **Dynamic Sorting & Filtering:** Admin and moderator dashboards feature server-side sorting and filtering for managing applications and users efficiently.
-  - **Complex Database Queries:** Utilizes **MongoDB Aggregation Pipelines** with `$lookup` and `$project` stages to efficiently join data from multiple collections for pages like "My Applications" and "All Reviews."
-  - **Secure Image Uploads:** Implements a secure backend proxy for handling image uploads to ImgBB, ensuring the API key is never exposed on the client-side.
+ - **⚙️ High-Performance Data Management with Tanstack Query:**
+  - All server-side data is managed through Tanstack Query, providing a seamless user experience with features like **caching, automatic refetching, and optimistic updates.**
+  - Complex UI, such as the "Manage Users" and "Manage Applications" tables, features dynamic, server-side sorting and filtering that are directly integrated with Tanstack Query's `queryKey` system for maximum efficiency.
+
 
 - **🎨 Eye-Catching & Interactive UI:**
   - **Physics-Based Animations:** The homepage banner features a dynamic background built with **GSAP** and an interactive **Matter.js** dot grid.
